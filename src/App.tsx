@@ -91,7 +91,7 @@ console.log("Our pretties ");
 
 			<main>
 				<div className='cards__wrapper'>
-					{}								
+					{cats.map(cat=><CatCard/>)}
 				</div>
 				
 			</main>
