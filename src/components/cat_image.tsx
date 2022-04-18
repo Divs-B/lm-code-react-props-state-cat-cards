@@ -1,28 +1,21 @@
-interface CatImage{
-    image:string;
-    altText:string;
-    licenceType: string;
-	licenceUrl: string;
-	attributionName?: string;
-	attributionUrl?: string;
-}
+import CatImage from '../data/cat-image'
 
 interface CatImageProps{
     catImageObject: CatImage
 }
 
-const CatImage: React.FC<CatImageProps> = (props) => (
+const CatImages: React.FC<CatImageProps> = ({catImageObject}) => (
     <>
-    <img className="card__image" src={props.catImageObject.image} alt={props.catImageObject.altText}/>
+    <img className="card__image" src={catImageObject.image} alt={catImageObject.altText}/>
     <p className="card__text__small">
-        Image licenced under <a href={props.catImageObject.licenceUrl}>{props.catImageObject.licenceType}</a>
-        {props.catImageObject.attributionName && (
+        Image licenced under <a href={catImageObject.licenceUrl}>{catImageObject.licenceType}</a>
+        {catImageObject.attributionName && (
             <>
-            &nbsp;by <a href={props.catImageObject.attributionUrl}>{props.catImageObject.attributionName}</a>
+            &nbsp;by <a href={catImageObject.attributionUrl}>{catImageObject.attributionName}</a>
             </>
         )}
     </p>
     </>
 );
 
-export default CatImage;
+export default CatImages;

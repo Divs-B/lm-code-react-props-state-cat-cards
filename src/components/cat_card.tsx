@@ -117,19 +117,15 @@ const images = [
 ];
 
 
-const CatCard: React.FC<CatCardProps> = (props) => {
-    console.log(
-		'CatCard receiving props from App?! Come in App?! 😸 Props received are: ',
-		props
-	);
-
+const CatCard: React.FC<CatCardProps> = ({catObject}) => {
+	
     return (
     <div className="card">
-        <h3 className="card__text card__header">{props.catObject.name}</h3>        
-        <p className="card__text">{props.catObject.species}</p>
-        <p className="card__text">{props.catObject.favFoods}</p>
-        <p className="card__text">{props.catObject.birthYear}</p>
-        <CatImage catImageObject={images[props.catObject.catIndex]}/>
+        <h3 className="card__text card__header">{catObject.name}</h3>        
+        <p className="card__text">{catObject.species}</p>
+        <p className="card__text">{catObject.favFoods}</p>
+        <p className="card__text">{catObject.birthYear}</p>
+        {catObject.catIndex < images.length && (<CatImage catImageObject={images[catObject.catIndex]}/>)}
     </div>
     )
 }
