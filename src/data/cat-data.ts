@@ -110,6 +110,6 @@ const catData: Array<Cat> = [
 catData.forEach(cat => {
     cat.id = uuidv4()
 });
-console.log("-------------->>>" + catData.entries);
+
 
 export default catData;
