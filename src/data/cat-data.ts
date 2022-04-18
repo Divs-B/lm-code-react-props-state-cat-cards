@@ -1,13 +1,13 @@
-import Cat from './cat';
+import Animal from './animal';
 import { v4 as uuidv4 } from 'uuid';
 
-const catData: Array<Cat> = [
+const catData: Array<Animal> = [
     {
         name: 'Little Miss Purrfect',
         species: 'Cat',
         favFoods: ['wet food', 'dry food'],
         birthYear: 2016,
-        catIndex: 0,
+        index: 0,
         id: ''
     },
     {
@@ -15,7 +15,7 @@ const catData: Array<Cat> = [
         species: 'Cat',
         favFoods: ['caviar'],
         birthYear: 2016,
-        catIndex: 1,
+        index: 1,
         id: ''
     },
     {
@@ -23,7 +23,7 @@ const catData: Array<Cat> = [
         species: 'Cat',
         favFoods: ['bugs'],
         birthYear: 2018,
-        catIndex: 2,
+        index: 2,
         id: ''
     },
     {
@@ -31,7 +31,7 @@ const catData: Array<Cat> = [
         species: 'Scaredy Cat',
         favFoods: ['not cucumbers!'],
         birthYear: 2008,
-        catIndex: 3,
+        index: 3,
         id: ''
     },
     {
@@ -39,7 +39,7 @@ const catData: Array<Cat> = [
         species: 'Cat',
         favFoods: ['tuna', 'catnip', 'celery'],
         birthYear: 2012,
-        catIndex: 4,
+        index: 4,
         id: ''
     },
     {
@@ -47,7 +47,7 @@ const catData: Array<Cat> = [
         species: 'Cat',
         favFoods: ['mice'],
         birthYear: 2012,
-        catIndex: 5,
+        index: 5,
         id: ''
     },
     {
@@ -55,7 +55,7 @@ const catData: Array<Cat> = [
         species: 'Cat',
         favFoods: ['cigarettes', 'coffee'],
         birthYear: 2015,
-        catIndex: 6,
+        index: 6,
         id: ''
     },
     {
@@ -63,7 +63,7 @@ const catData: Array<Cat> = [
         species: 'Cat',
         favFoods: ['salt'],
         birthYear: 2020,
-        catIndex: 7,
+        index: 7,
         id: ''
     },
     {
@@ -71,7 +71,7 @@ const catData: Array<Cat> = [
         species: 'Bird?',
         favFoods: ['your soul'],
         birthYear: 2020,
-        catIndex: 8,
+        index: 8,
         id: ''
     },
     {
@@ -79,7 +79,7 @@ const catData: Array<Cat> = [
         species: 'Cat',
         favFoods: ['tequila', 'bar snax'],
         birthYear: 1995,
-        catIndex: 9,
+        index: 9,
         id: ''
     },
     {
@@ -87,7 +87,7 @@ const catData: Array<Cat> = [
         species: 'Hungry Cat',
         favFoods: ['blankets', 'feet', 'tinsel'],
         birthYear: 2003,
-        catIndex: 10,
+        index: 10,
         id: ''
     },
     {
@@ -95,7 +95,7 @@ const catData: Array<Cat> = [
         species: 'Tiny Cat',
         favFoods: ['milk'],
         birthYear: 2021,
-        catIndex: 11,
+        index: 11,
         id: ''
     },
     {
@@ -103,7 +103,7 @@ const catData: Array<Cat> = [
         species: "Sea Cattain",
         favFoods: ["fish, rum"],
         birthYear: 2016,
-        catIndex: 12,
+        index: 12,
         id: ''
     }
 ];

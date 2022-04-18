@@ -1,8 +1,8 @@
-export default interface Cat {
+export default interface Animal {
     name: string;
     species: string;
     favFoods: Array<string>;
     birthYear: number;
-    catIndex: number;
+    index: number;
     id: string;
 }

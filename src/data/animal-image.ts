@@ -1,4 +1,4 @@
-export default interface DogImage {
+export default interface AnimalImage {
     image: string;
     altText: string;
     licenceType: string;

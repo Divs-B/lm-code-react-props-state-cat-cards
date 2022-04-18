@@ -1,13 +1,13 @@
-import Dog from './dog';
+import Animal from './animal';
 import { v4 as uuidv4 } from 'uuid';
 
-const dogData: Array<Dog> = [
+const dogData: Array<Animal> = [
 	{
 		name: 'Floofus',
 		species: 'Puppy',
 		favFoods: ['marshmallows'],
 		birthYear: 2020,
-		dogIndex: 0,
+		index: 0,
 		id: ''
 	},
 	{
@@ -15,7 +15,7 @@ const dogData: Array<Dog> = [
 		species: 'Doggo',
 		favFoods: ['porridge, dog food'],
 		birthYear: 2010,
-		dogIndex: 1,
+		index: 1,
 		id: ''
 	},
 	{
@@ -23,7 +23,7 @@ const dogData: Array<Dog> = [
 		species: 'Dog',
 		favFoods: ['bouncy balls'],
 		birthYear: 2015,
-		dogIndex: 2,
+		index: 2,
 		id: ''
 	},
 ];

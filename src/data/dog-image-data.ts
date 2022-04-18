@@ -1,9 +1,9 @@
-import DogImage from "./cat-image"
+import AnimalImage from "./animal-image"
 import dog1 from '../assets/images/dog1.jpg';
 import dog2 from '../assets/images/dog2.jpg';
 import dog3 from '../assets/images/dog3.jpg';
 
-const dogImages: Array<DogImage> = [
+const dogImages: Array<AnimalImage> = [
     {
         image: dog1,
         altText: 'Describe this cat!',
