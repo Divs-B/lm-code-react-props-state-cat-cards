@@ -10,11 +10,12 @@ import AnimalCard from "./components/animal_card";
 import catImages from "./data/cat-image-data";
 import dogImages from "./data/dog-image-data";
 import Animal from "./data/animal";
+import AnimalAddForm from "./components/animal_add_form";
 
 function App() {
   const [cats, setCats] = useState<Array<Animal>>(catData);
   const [dogs, setDogs] = useState<Array<Animal>>(dogData);
-  const [myTextInputValue, setMyTextInputValue] = useState({
+  const [textInputValue, setTextInputValue] = useState({
     name: "",
     species: "",
     favFoods: "",
@@ -25,23 +26,23 @@ function App() {
   const allDogImages = dogImages;
 
   const onChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setMyTextInputValue({
-      ...myTextInputValue,
+    setTextInputValue({
+      ...textInputValue,
       [event.target.id]: event.target.value,
     });
   };
 
   const onSubmit = (event: React.MouseEvent<HTMLButtonElement>) => {
+    event.preventDefault();
     const catNewData: Animal = {
-      name: myTextInputValue.name,
-      species: myTextInputValue.species,
-      favFoods: myTextInputValue.favFoods.split(",").map((text) => text),
-      birthYear: myTextInputValue.birthYear,
+      name: textInputValue.name,
+      species: textInputValue.species,
+      favFoods: textInputValue.favFoods.split(",").map((text) => text),
+      birthYear: textInputValue.birthYear,
       index: cats.length,
       id: uuidv4(),
     };
-    catData.push(catNewData);
-    setCats(catData);
+    setCats([...catData, catNewData]);
   };
 
   return (
@@ -65,49 +66,12 @@ function App() {
               key={dog.id}
             />
           ))}
+          <AnimalAddForm
+            textInputValue={textInputValue}
+            onChange={onChange}
+            onSubmit={onSubmit}
+          />
         </div>
-
-        <form className="mt-2">
-          <label htmlFor="name">Name</label>
-          <input
-            type="text"
-            className="form-control"
-            placeholder="Name"
-            id="name"
-            value={myTextInputValue.name}
-            onChange={onChange}
-          />
-          <label htmlFor="species">Species</label>
-          <input
-            type="text"
-            className="form-control"
-            placeholder="Species"
-            id="species"
-            value={myTextInputValue.species}
-            onChange={onChange}
-          />
-          <label htmlFor="favFoods">favFoods</label>
-          <input
-            type="text"
-            className="form-control"
-            placeholder="favFoods"
-            id="favFoods"
-            value={myTextInputValue.favFoods}
-            onChange={onChange}
-          />
-          <label htmlFor="birthYear">birthYear</label>
-          <input
-            type="text"
-            className="form-control"
-            placeholder="birthYear"
-            id="birthYear"
-            value={myTextInputValue.birthYear}
-            onChange={onChange}
-          />
-          <button className="btn btn-primary mt-2" onClick={onSubmit}>
-            Submit
-          </button>
-        </form>
       </main>
 
       <Footer />
